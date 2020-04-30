@@ -5,6 +5,10 @@ image:
   tag: v1.8.0
   pullPolicy: IfNotPresent
 
+container:
+  metrics_port_name: "http"
+  telemetry_port_name: "telemetry"
+
 replicas: 1
 
 service:

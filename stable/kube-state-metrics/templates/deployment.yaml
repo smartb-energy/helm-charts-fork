@@ -120,6 +120,9 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         ports:
         - containerPort: 8080
+          name:  {{ .Values.container.metrics_port_name }}
+        - containerPort: 8081
+          name:  {{ .Values.container.telemetry_port_name }}
         livenessProbe:
           httpGet:
             path: /healthz
